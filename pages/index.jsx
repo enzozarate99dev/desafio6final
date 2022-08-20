@@ -15,7 +15,7 @@ const Home = () => {
       'https://jsonplaceholder.typicode.com/users',
     )
 
-    setUsers(response.data) 
+    setUsers(response.data)
   }
 
   // Effects
@@ -32,17 +32,10 @@ const Home = () => {
       </Head>
       <h1>Usuarios</h1>
 
-
       {users.map((user) => (
-        <Card
-          key={user.id}
-          name={user.name}
-          email={user.email}
-
-        />
+        <Card key={user.id} id={user.id} name={user.name} email={user.email} />
       ))}
-
-
     </div>
   )
-}; export default Home
+}
+export default Home
